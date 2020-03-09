@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Website Layout</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 3em;
+        }
+        .container{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 120px 70px 400px 120px;
+            grid-template-areas:
+            "header header"
+            "nav nav"
+            "main aside"
+            "footer footer";
+
+        }
+        header{
+            grid-area: header;
+            background-color: aqua;
+        }
+        nav{
+            grid-area: nav;
+            background-color: cornflowerblue;
+        }
+        main{
+            grid-area: main;
+            background-color: violet;
+        }
+        aside{
+            grid-area: aside;
+            background-color: tomato;
+        }
+        footer{
+            grid-area: footer;
+            background-color: steelblue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    
+    <header>HEADER</header>
+    <nav>NAV</nav>
+    <main>MAIN</main>
+    <aside>ASIDE</aside>
+    <footer>FOOTER</footer>
+
+</div>
+
+</body>
+</html>
